@@ -1,56 +1,18 @@
 Rails.application.routes.draw do
-  # The priority is based upon order of creation: first created -> highest priority.
-  # See how all your routes lay out with "rake routes".
+ root :to => 'marketing#index'
 
-  # You can have the root of your site routed with "root"
-  # root 'welcome#index'
-
-  # Example of regular route:
-  #   get 'products/:id' => 'catalog#view'
-
-  # Example of named route that can be invoked with purchase_url(id: product.id)
-  #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
-
-  # Example resource route (maps HTTP verbs to controller actions automatically):
-  #   resources :products
-
-  # Example resource route with options:
-  #   resources :products do
-  #     member do
-  #       get 'short'
-  #       post 'toggle'
-  #     end
-  #
-  #     collection do
-  #       get 'sold'
-  #     end
-  #   end
-
-  # Example resource route with sub-resources:
-  #   resources :products do
-  #     resources :comments, :sales
-  #     resource :seller
-  #   end
-
-  # Example resource route with more complex sub-resources:
-  #   resources :products do
-  #     resources :comments
-  #     resources :sales do
-  #       get 'recent', on: :collection
-  #     end
-  #   end
-
-  # Example resource route with concerns:
-  #   concern :toggleable do
-  #     post 'toggle'
-  #   end
-  #   resources :posts, concerns: :toggleable
-  #   resources :photos, concerns: :toggleable
-
-  # Example resource route within a namespace:
-  #   namespace :admin do
-  #     # Directs /admin/products/* to Admin::ProductsController
-  #     # (app/controllers/admin/products_controller.rb)
-  #     resources :products
-  #   end
+ get '/about-us' => 'marketing#about_us'
+ get '/maths-curriculum' => 'marketing#curriculum'
+ get '/online-maths-intervention' => 'marketing#how_it_works'
+ get '/meet-the-tutors' => 'marketing#meet_the_tutors'
+ get '/book-a-demo' => 'marketing#book_a_demo'
+ get '/our-schools' => 'marketing#our_schools'
+ get '/our-schools/rush-green-primary-school' => 'marketing#rush_green_primary_school'
+ get '/our-schools/springfield-primary-school' => 'marketing#springfield_primary_school'
+ get '/our-schools/somers-heath-primary-school' => 'marketing#somers_heath_primary_school'
+ get '/our-schools/green-park-primary-school' => 'marketing#green_park_primary_school'
+ get '/our-schools/copthorne-primary-school' => 'marketing#copthorne_primary_school'
+ get '/pricing' => 'marketing#pricing'
+ get '/careers' => 'marketing#careers'
+ get '/login' => 'marketing#login'
 end

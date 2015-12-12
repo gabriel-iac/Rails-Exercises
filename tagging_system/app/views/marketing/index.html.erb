@@ -1,0 +1,124 @@
+<div class="container-fluid hero-section">
+	<div class="row hero-unit">
+		<%= image_tag "marketing/homepage_header.jpg", class: "hero-background img-responsive" %>
+		<div class="hero-content">
+			<div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
+				<%= image_tag "marketing/ruler-big-icon.png", class: "center-item hero-icon" %>
+				<h1>We are Maths specialists.</h1>
+				<h4>Our tutors provide one-to-one support for pupils at primary school, helping teachers to raise attainment and create confident learners</h4>
+			</div>
+		</div>
+	</div>
+	<div class="row cta-unit">
+		<div class="container">
+			<h2>WE'VE DELIVERED <span class="yellow-highlight">61,378</span> SESSIONS TO <span class="yellow-highlight">6000</span> PUPILS IN <span class="yellow-highlight">300</span> SCHOOLS IN ENGLAND</h2>
+		</div>
+	</div>
+	<div class="row hero-unit">
+		<%= image_tag "marketing/homepage_pupils_communicate.jpg", class: "hero-background img-responsive" %>
+		<div class="hero-content center">
+			<div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
+				<%= image_tag "marketing/headphones-big-icon.png", class: "center-item hero-icon" %>
+				<h2 class="main">Pupils communicate with their tutor one-to-one through our online classroom</h2>
+				<a class="btn" href="<%= online_maths_intervention_path %>">See how it works</a>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="section-wrapper">
+	<div class="container">
+		<h1>Why choose us?</h1>
+		<div class="row">
+			<div class="col-md-4 col-md-offset-2">
+				<div class="info-text-area">
+					<%= image_tag "marketing/icon-one-to-one-attention.png" %>
+				    <h2 class="info-header">ONE-TO-ONE ATTENTION</h2>
+				    <p class="info-text">Each pupil gets their own one-to-one tutor who tailors each lesson to your teaching needs and your pupil's subject knowledge and ability.</p>
+				</div>
+				<div class="info-text-area">
+				    <%= image_tag "marketing/icon-growth-mindset-maths.png" %>
+				    <h2 class="info-header">GROWTH MINDSET MATHS</h2>
+				    <p class="info-text">Weekly lessons build confidence and resilience to overcome challenges as pupils respond to regular personalised feedback.</p>
+				</div>
+				<div class="info-text-area">
+				    <%= image_tag "marketing/icon-easy-to-integrate-in-school.png" %>
+				    <h2 class="info-header">EASY TO INTEGRATE IN SCHOOL</h2>
+				    <p class="info-text">Maths intervention can be focused on specific pupils with minimum disruption at a time that suits you, before, during or after school.</p>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="info-text-area">
+				    <%= image_tag "marketing/icon-follows-national-curriculum.png" %>
+				    <h2 class="info-header">FOLLOWS NATIONAL CURRICULUM</h2>
+				    <p class="info-text">Choose topics or schemes of work from any KS1 or KS2 Maths topic area - <%= link_to "270 lessons with a focus on depth and mastery.", "/maths-curriculum" %></p>
+				</div>
+				<div class="info-text-area">
+				    <%= image_tag "marketing/icon-maths-specialist-tutors.png" %>
+				    <h2 class="info-header">MATHS SPECIALIST TUTORS</h2>
+				    <p class="info-text">All tutors are trained in primary Maths pedagogy (aligned to Institute of Education research and Ofsted), and follow a strict <%= link_to 'safeguarding policy.', '/meet-the-tutors' %></p>
+				</div>
+				<div class="info-text-area">
+				    <%= image_tag "marketing/icon-fluency-and-reasoning.png" %>
+				    <h2 class="info-header">FLUENCY AND REASONING</h2>
+				    <p class="info-text">Pupils develop fluency and reasoning as well as speaking and listening skills while verbalising Maths concepts one-to-one with an adult.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="section-wrapper gray-section">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4">
+				<div class="quote-area">
+					<%= image_tag "marketing/people/Michael_Christiansen.png", class: "quote-photo" %>
+				    <div class="quote-box">
+				        <p class="quote-name">MICHAEL CHRISTIANSEN</p>
+				        <p class="quote-position">Deputy Head, Rush Green Primary School</p>
+				        <%= image_tag "marketing/quote.png", class: "quote-upside-down" %>
+				        <p class="quote">We’ve put 20 children onto Third Space and it’s been ideal. They can talk one-to-one with their tutor and if they get something wrong nobody else can hear it, so they can sort out their mistakes really simply and easily.</p>
+				        <%= image_tag "marketing/quote.png" %>
+				    </div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="quote-area">
+				    <%= image_tag "marketing/people/pupil-quote.png", class: "quote-photo" %>
+				    <div class="quote-box">
+				        <p class="quote-name">YEAR 6 PUPIL</p>
+				        <p class="quote-position">Walsall</p>
+				        <%= image_tag "marketing/quote.png", class: "quote-upside-down" %>
+				        <p class="quote">My last results were better, so I know I am making progress. I like having my tutor to go over things with me. I feel more confident about Maths now.</p>
+				        <%= image_tag "marketing/quote.png" %>
+				    </div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="quote-area">
+				    <%= image_tag "marketing/people/St_Vincent_de_Paul-quote.png", class: "quote-photo" %>
+				    <div class="quote-box">
+				        <p class="quote-name">ANN FOTHERGILL</p>
+				        <p class="quote-position">Deputy Headteacher, St Vincent de Paul RC Primary School</p>
+				        <%= image_tag "marketing/quote.png", class: "quote-upside-down" %>
+				        <p class="quote">It has given them a love and enjoyment of Maths. The children have improved academically, even those who previously found Maths difficult at school.</p>
+				        <%= image_tag "marketing/quote.png" %>
+				    </div>
+				</div>
+			</div>
+		</div>
+		<div class="center-block section-cta center">
+			<a class="btn" href="<%= our_schools_path %>">View our success stories</a>
+		</div>
+	</div>
+</div>
+<div class="logos-list">
+	<div class="container">
+		<ul>
+			<li><%= image_tag "marketing/logos/IoE-logo.png" %></li>
+			<li><%= image_tag "marketing/logos/besa-logo.png" %></li>
+			<li><%= image_tag "marketing/logos/nesta-logo.png" %></li>
+			<li><%= image_tag "marketing/logos/innovate-uk-logo.png" %></li>
+			<li><%= image_tag "marketing/logos/ananda-social-fund-logo.png" %></li>
+		</ul>
+	</div>
+</div>

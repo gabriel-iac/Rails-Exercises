@@ -1,0 +1,87 @@
+<div class="container-fluid hero-section">
+	<div class="row hero-unit">
+		<%= image_tag "marketing/heros/book-a-demo.jpg", class: "hero-background img-responsive" %>
+		<div class="hero-content">
+			<div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2 col-lg-4 col-lg-offset-4">
+				<%= image_tag "marketing/book-a-demo-icon.png", class: "center-item hero-icon" %>
+				<h1>Book a free demo</h1>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="section-wrapper">
+	<div class="container center">
+		<h2 class="large">Discover how our one-to-one online tuition can help raise academic performance in Maths at your school.</h2>
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2">
+				<h3 class="border-title">PLEASE USE THE FORM TO BOOK A FREE DEMO -<br>IT ONLY TAKES ABOUT 10 MINUTES OVER THE PHONE:</h2>
+				<div class="ul-arrows-list">
+					<ul class="green-arrows">
+						<li>See how easy our school platform is to set up and use</li>
+						<li>Review our entire primary curriculum</li>
+						<li>Select pupil lessons and see our tutor feedback</li>
+						<li>Make contact with a school who's already using Third Space Learning</li>
+						<li><span class="yellow-highlight">Find out about special offers and discounts</span></li>
+						<li>Get a quote and ask any questions</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="section-wrapper gray-section">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<%= form_for BookDemo.new, :html => {:class => "inline-validate"} do |f| -%>
+				    <div class="form-section">
+						<h4 class='form-header'>About you</h4>
+						<div class="form-group">
+							<%= f.label :name %>
+							<%= f.text_field :name, class: "form-control", :required => true %>
+						</div>
+						<div class="form-group">
+							<%= f.label :school %>
+							<%= f.text_field :school, class: "form-control", :required => true %>
+						</div>
+						<div class="form-group">
+							<%= f.label :email %>
+							<%= f.text_field :email, class: "form-control", :required => true, :email => true %>
+						</div>
+						<div class="form-group">
+							<%= f.label "Phone (optional)" %>
+							<%= f.text_field :contact_number, class: "form-control" %>
+						</div>
+					</div>
+					<div class="form-section">
+						<h4 class='form-header'>When can we call you? (optional)</h4>
+						<div class="form-group">
+							<%= f.label :date %>
+							<%= f.text_field :scheduled_date, :class => 'datepicker with-datepicker-icon form-control' %>
+						</div>
+						<div class="form-group">
+							<%= f.label :time %>
+							<div class="time-select">
+								<%= f.select(:scheduled_hour, hours_digits(9, 17), { prompt: 'HH' }, class: 'hour time-input-field form-control' ) %>
+								<%= f.select(:scheduled_minute, five_minute_intervals, { prompt: 'MM' }, class: 'minute time-input-field form-control' ) %>
+							</div>
+						</div>
+						<button class="submit btn-3" type="submit">Confirm</button>
+					</div>
+				<% end %>
+			</div>
+		<div class="col-md-4 col-md-offset-1">
+			<div class="quote-area">
+				<%= image_tag "marketing/people/Adam-Stock-photo.png", class: "quote-photo" %>
+			    <div class="quote-box">
+			        <p class="quote-name">ADAM STOCK</p>
+			        <p class="quote-position">Deputy Headteacher, Mayflower Primary School, London</p>
+			        <%= image_tag "marketing/quote.png", class: "quote-upside-down" %>
+			        <p class="quote">Third Space Learning <span class="yellow-highlight">enables the children to just talk and talk and talk some more.</span> And it's all about Maths! They really enjoy  taking part in this fantastic programme and I would definitely recommend it.</p>
+			        <%= image_tag "marketing/quote.png" %>
+			    </div>
+			</div>
+		</div>
+	</div>
+</div>

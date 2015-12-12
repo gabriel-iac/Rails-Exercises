@@ -1,0 +1,21 @@
+<% if flash[:success] %>
+	<div class="flash-message flash-success">
+		<div class="container">
+			<div class="row">
+				<div class="flash-icon"><%= image_tag("marketing/success-tick-icon.png") %></div>
+				<p><%= flash[:success].to_s %></p>
+				<%= link_to image_tag("marketing/cross-for-banner-alert.png"), "#", class: "flash-message-close", remote: true %>
+			</div>
+		</div>
+	</div>
+<% end %>
+
+<% if flash[:error] %>
+	<div class="flash-message flash-error">
+		<div class="container">
+			<%= image_tag("marketing/error-message-icon.png", class: "flash-icon") %>
+			<p><%= flash[:error].to_s %></p>
+			<%= link_to image_tag("marketing/cross-for-banner-alert.png"), "#", class: "flash-message-close", remote: true %>
+		</div>
+	</div>
+<% end %>

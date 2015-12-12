@@ -1,0 +1,32 @@
+<footer class="container-fluid">
+	<section class="row links">
+		<div class="col-md-4 col-sm-6 contacts">
+			<a class="link-with-icon pin link-dark" href="https://goo.gl/maps/zPpzY4nZUuQ2" target='_blank'>Kensington Aldridge Academy<br>1 Silchester Road, London W10 6EX</a>
+			<a class="link-with-icon email link-dark" href="mailto:hello@thirdspacelearning.com">hello@thirdspacelearning.com</a>
+			<a class="link-with-icon phone link-dark" href="callto:02037710093">0203 771 0093</a>
+		</div>
+		<div class="col-md-4 col-sm-6 social">
+			<a class="link-with-icon twitter link-dark" href="https://twitter.com/thirdspacetweet" target='_blank'>@ThirdSpaceTweet</a>
+			<a class="link-with-icon youtube link-dark" href="https://www.youtube.com/c/ThirdSpaceLearningTuition" target='_blank'>YouTube Channel</a>
+			<a class="link-with-icon linkedin link-dark" href="https://www.linkedin.com/company/third-space-learning" target='_blank'>Linkedin</a>
+		</div>
+		<div class="col-md-4 col-sm-6 secondary-links">
+			<a href="<%= about_us_path %>" class="link-dark">About Us</a>
+			<a href="<%= careers_path %>" class="link-dark">Careers</a>
+			<a href="<%= asset_path('Third-Space-Learning-terms-and-conditions.pdf') %>" class="link-dark" target='_blank'>Terms & Conditions</a>
+			<a href="<%= asset_path('Third-Space-Learning-privacy-policy.pdf') %>" class="link-dark" target='_blank'>Privacy Policy</a>
+		</div>
+		<!-- Compacticons by tatosXL - http://tatosxl.deviantart.com/art/Compacticons-479216575 - tatuera@gmail.com - http://creativecommons.org/licenses/by-sa/3.0/ -->
+	</section>
+	<section class="marketing-input container">
+		<p class="tondo col-md-8">Like what you see? Keep up to date with teaching tips, <span class="yellow-highlight">free resources and special offers.</span></p>
+		<div class="email-input col-md-4">
+			<div class="input-group-wrapper">
+				<%= form_for DataCapture.new, method: "post" do |f| %>
+					<%= f.text_field :email, placeholder: "Your email address", class: "form-field" %>
+					<%= f.submit "Enter", class: "btn-3 form-submit" %>
+				<% end %>
+			</div>
+		</div>
+	</section>
+</footer>

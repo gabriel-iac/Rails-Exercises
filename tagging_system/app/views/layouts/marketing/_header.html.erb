@@ -1,0 +1,42 @@
+<header>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <div class="topbar-wrap navbar-left">
+          <a class="navbar-brand" href="<%= root_path -%>">
+            <%= image_tag 'marketing/third-space-learning-logo.png' %>
+          </a>
+        </div>
+      </div>
+
+      <div class="collapse navbar-collapse" id="navbar-collapse">
+        <ul class='nav topbar navbar-nav collapse navbar-collapse'>
+          <li>
+            <a class="btn-login" href="<%= new_user_session_path %>">Log In</a>
+          </li>
+          <li>
+          <a class="btn-2" href="<%= book_a_demo_path %>">Book a demo</a>
+          </li>
+          <li><%= link_to '0203 771 0093', 'callto:02037710095' %></li>
+        </ul>
+        <ul class="nav navbar-nav main-menu navbar-right">
+          <li class='<%= set_current_item_by_controller_and_action({ controller: "marketing", action: 'book_a_demo'}) -%> book-a-demo-menu'><a href="<%= book_a_demo_path %>">Book a demo</a></li>
+          <li class='<%= set_current_item_by_controller_and_action({ controller: "marketing", action: 'index'}) -%>'><a href="<%= root_path -%>">Home</a></li>
+          <li class='<%= set_current_item_by_controller_and_action({ controller: "marketing", action: 'how_it_works'}) -%>'><a href="<%= online_maths_intervention_path %>">How it Works</a></li>
+          <li class='<%= set_current_item_by_controller_and_action({ controller: "marketing", action: 'our_schools'}) -%>'><a href="<%= our_schools_path %>">Our Schools</a></li>
+          <li class='<%= set_current_item_by_controller_and_action({ controller: "marketing", action: 'curriculum'}) -%>'><a href="<%= maths_curriculum_path -%>">Curriculum</a></li>
+          <li class='<%= set_current_item_by_controller_and_action({ controller: "marketing", action: 'meet_the_tutors'}) -%>'><a href="<%= meet_the_tutors_path %>">Tutors</a></li>
+          <li class='<%= set_current_item_by_controller_and_action({ controller: "marketing", action: 'pricing'}) -%>'><a href="<%= pricing_path %>">Pricing</a></li>
+          <li class='<%= set_current_item_by_controller_and_action({ controller: "marketing", action: 'about_us'}) -%>'><a href="<%= about_us_path %>">About Us</a></li>
+          <li class='<%= set_current_item_by_controller_and_action({ controller: "marketing", action: 'careers'}) -%>'><a href="<%= careers_path %>">Careers</a></li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+</header>
