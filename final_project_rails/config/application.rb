@@ -21,8 +21,20 @@ module FinalProjectRails
     # config.i18n.default_locale = :de
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
-    config.active_record.raise_in_transactional_callbacks = true
 
-    config.assets.initialize_on_precompile = false
-  end
+    config.autoload_paths += Dir["#{config.root}/lib/"]
+    config.autoload_paths += Dir["#{config.root}/app/models/*/**/"]
+    config.autoload_paths += Dir[ Rails.root.join('app', 'models', "concerns", '**/') ]
+
+    config.autoload_paths += %W(
+      #{config.root}/app/services
+      )
+
+config.eager_load_paths += %W(
+  #{config.root}/app/services
+  )
+config.active_record.raise_in_transactional_callbacks = true
+
+config.assets.initialize_on_precompile = false
+end
 end
